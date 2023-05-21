@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import Search from "./components/Search";
+import CardMd from "./components/cards/CardMd";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -17,6 +18,24 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <Search />
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <CardMd
+          source={require("./assets/icons/television.png")}
+          text="TV Shows"
+        />
+        <CardMd source={require("./assets/icons/reel.png")} text="Reels" />
+        <CardMd source={require("./assets/icons/youtube.png")} text="Youtube" />
+        <CardMd
+          source={require("./assets/icons/world-wide-web.png")}
+          text="Web"
+        />
+      </View>
     </View>
   );
 }
