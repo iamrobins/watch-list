@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import Search from "./components/Search";
 import CardMd from "./components/cards/CardMd";
+import { SHeading } from "./components/globals";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -17,6 +18,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <SHeading>Good Evening</SHeading>
       <Search />
       <View
         style={{

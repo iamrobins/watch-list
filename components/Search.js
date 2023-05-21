@@ -1,5 +1,4 @@
 import { TextInput, StyleSheet } from "react-native";
-import { SHeading } from ".//globals";
 import { useState } from "react";
 
 export default function Search({ navigation }) {
@@ -7,10 +6,9 @@ export default function Search({ navigation }) {
 
   return (
     <>
-      <SHeading>Search</SHeading>
       <TextInput
         style={styles.search}
-        placeholder="Search a song 🎵"
+        placeholder="Search something 💭"
         onChangeText={(newText) => setSearch(newText)}
         defaultValue={search}
       />
